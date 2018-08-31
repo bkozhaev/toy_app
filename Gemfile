@@ -1,3 +1,8 @@
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '2.4.0'
+
 
 source 'https://rubygems.org'
 
@@ -25,3 +30,8 @@ end
 group :production do
   gem 'pg', '0.20.0'
 end
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
+
+
